@@ -1,0 +1,1053 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		13A80A35367EE8F717CA84145F4D4F47 /* Pods-Storia-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FA064668DED05EBE7AE951A76BDA252 /* Pods-Storia-dummy.m */; };
+		1FC3FD39157C2FFFF3869A1300730086 /* SessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 339050A6A662C9A853443C496C81D39F /* SessionDelegate.swift */; };
+		35B8EF3502F2119F787D7E358CE9EB74 /* WebCommunications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2654373FA9216ED6E8676C5012953C91 /* WebCommunications.swift */; };
+		36FF8853CB34A9297AFAA8F5F7456324 /* TaskDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F599A64BF666BBF0A2E704D1B398EA8 /* TaskDelegate.swift */; };
+		3D1EA63DBE74A5CF2FE9C062F49D820D /* SpotifyKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D41794C047F45EC7976F75355A010B /* SpotifyKit-dummy.m */; };
+		460C257CF7683B4989454FDB3220D086 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6DFF15000AFE2A371BF499E7AFDA808 /* Foundation.framework */; };
+		4E1A913EFB404FB11524718FF0298EFE /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883416C6192556435410B7A6E82D80DF /* Alamofire.swift */; };
+		500C8EDA60C07B0F127C7FC385E17D38 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E36D0844562606A26B1BE9E498678C3 /* Notifications.swift */; };
+		52237C35642089F77DD4D723CEB25737 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DF518CC07DCF846264C0BB1A4B0166 /* Response.swift */; };
+		58A9719584AFA2D108D9E5C585A79329 /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095B1839571F883CEC3B2E628E9B58C4 /* Validation.swift */; };
+		5EE5FED83B90A606A763CF1114D1D6FB /* ResponseSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87C3C2AF6E54E5EF47EDDB192CB5776 /* ResponseSerialization.swift */; };
+		6A23CF148AC15F581EC570EEBEA2C382 /* SpotifyItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A6920955376E7C72C46150740BAEE4 /* SpotifyItems.swift */; };
+		6BEA14EC335E07C7063CD1383C0C443C /* ServerTrustPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715F7680D944DBA0224AC8F15D89B813 /* ServerTrustPolicy.swift */; };
+		7068E8A7DDC1424EE8F24BC77E8746F4 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D255160BFD77291355FD61A9884912E5 /* SessionManager.swift */; };
+		796177DE2762F24DAC16A709FD954838 /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3B464906ACAC4490284F62D934AEF6 /* ParameterEncoding.swift */; };
+		8D1E66FE754A575BFFD9E0A4AD2E5ACC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6DFF15000AFE2A371BF499E7AFDA808 /* Foundation.framework */; };
+		9360B0757E59FEA16D828D5DFB72F514 /* Pods-Storia-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 39E0607A162B0282C98323D430F841AC /* Pods-Storia-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		95A0957FE3C301568CDDC1374A4AAA2F /* SpotifyKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DD992D57ACF00FAB9C4C1C9A73BCBE42 /* SpotifyKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		965DACF3DC02857ECBE66C5CBA3DA5D4 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DA0FFDBB86EC2BEF896480ADBAE9A8 /* Request.swift */; };
+		AE76B0E1EF7D876A7161F93EB3B16A13 /* SwiftyJSON-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BB40CEDE6623B9D713364EFB97278654 /* SwiftyJSON-dummy.m */; };
+		AED65B71AEE930425F363A97172385B6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6DFF15000AFE2A371BF499E7AFDA808 /* Foundation.framework */; };
+		B424F524BBBE34E685129945993809A8 /* Timeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361BC3F2BEF654D8EBBB0652080465D6 /* Timeline.swift */; };
+		B48E971704BDD295C12B5D29B01737DB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6DFF15000AFE2A371BF499E7AFDA808 /* Foundation.framework */; };
+		B49D8D2A3917ECD59032D6FDDC9440CE /* SwiftyJSON-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D08D3AB340E41ABE32D9190386B7D61D /* SwiftyJSON-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B77705737566AE83ED7E448923D7FA60 /* NetworkReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEAFDC6879133D8D11E66641D919830 /* NetworkReachabilityManager.swift */; };
+		BE4BA1EDE444A770F834605F4B65348E /* AFError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9286C896FA89D7A7FFAE56EA5250605B /* AFError.swift */; };
+		CCAFE8BF70E6251A3FB7673D2675875C /* SpotifyKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF2CDB73FA8A1E0CF90554B4C680DCA /* SpotifyKit.swift */; };
+		D4C3899574E9D5DF5E5DA52310560BCC /* Alamofire-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CB4C76225BF5607F2661E42E295B1769 /* Alamofire-dummy.m */; };
+		D7E66B41BC321315737F49B3EBE66EDC /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61389A5C9EB196CA654E0869411C5F40 /* SwiftyJSON.swift */; };
+		DBE6E2E4D205545E7988CFA5057C31D6 /* DispatchQueue+Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CE0827140C2041D6B0232D9A4865E8 /* DispatchQueue+Alamofire.swift */; };
+		EF1461221681BCA12A4147900A704727 /* Alamofire-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 10BC8382EC77A0ACA07BD568155A54D7 /* Alamofire-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F9EA61D484CC15FDDAB0D8C0D26D7949 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7962023EF7A48CE49AADB9AEE9FF2155 /* Result.swift */; };
+		FBC7CCC0E161857A7664E093FDF5E1BA /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C6391D7B6532CFAEB67CD4FC764F9B8 /* Keychain.swift */; };
+		FF9C7BC64DB23D2CED48197DE67F0335 /* MultipartFormData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D53DF1FC0992413A0FFCBA02E3878C6 /* MultipartFormData.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1F56667740900491FD4D2AF169C656C2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E76458C58C9140B6A16D60547E68E80C;
+			remoteInfo = Alamofire;
+		};
+		5C2F862D47FC90ABDC3301A0F093F185 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6DBCEEF1ED5A015B8D976E9432AC5E4C;
+			remoteInfo = SwiftyJSON;
+		};
+		B06B586A6898546941A463AAA5B2AA6C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 559520667349FAF077F43C1059186EC2;
+			remoteInfo = SpotifyKit;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		04CE0827140C2041D6B0232D9A4865E8 /* DispatchQueue+Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DispatchQueue+Alamofire.swift"; path = "Source/DispatchQueue+Alamofire.swift"; sourceTree = "<group>"; };
+		08DA0FFDBB86EC2BEF896480ADBAE9A8 /* Request.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Request.swift; path = Source/Request.swift; sourceTree = "<group>"; };
+		095B1839571F883CEC3B2E628E9B58C4 /* Validation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Validation.swift; path = Source/Validation.swift; sourceTree = "<group>"; };
+		10BC8382EC77A0ACA07BD568155A54D7 /* Alamofire-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-umbrella.h"; sourceTree = "<group>"; };
+		1F599A64BF666BBF0A2E704D1B398EA8 /* TaskDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TaskDelegate.swift; path = Source/TaskDelegate.swift; sourceTree = "<group>"; };
+		20E6280A9EB3E0D17CEEC84AB120BF61 /* Alamofire.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Alamofire.xcconfig; sourceTree = "<group>"; };
+		21714BF966C15CE0672E90A632C3792F /* Pods-Storia-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Storia-acknowledgements.markdown"; sourceTree = "<group>"; };
+		23593F98B8C808D105F93F6EDD9E3C6C /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2654373FA9216ED6E8676C5012953C91 /* WebCommunications.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = WebCommunications.swift; path = Sources/WebCommunications.swift; sourceTree = "<group>"; };
+		2EF2CDB73FA8A1E0CF90554B4C680DCA /* SpotifyKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SpotifyKit.swift; path = Sources/SpotifyKit.swift; sourceTree = "<group>"; };
+		339050A6A662C9A853443C496C81D39F /* SessionDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionDelegate.swift; path = Source/SessionDelegate.swift; sourceTree = "<group>"; };
+		361BC3F2BEF654D8EBBB0652080465D6 /* Timeline.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Timeline.swift; path = Source/Timeline.swift; sourceTree = "<group>"; };
+		37DF518CC07DCF846264C0BB1A4B0166 /* Response.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Response.swift; path = Source/Response.swift; sourceTree = "<group>"; };
+		39E0607A162B0282C98323D430F841AC /* Pods-Storia-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Storia-umbrella.h"; sourceTree = "<group>"; };
+		3E36D0844562606A26B1BE9E498678C3 /* Notifications.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Notifications.swift; path = Source/Notifications.swift; sourceTree = "<group>"; };
+		4CBC83D5A48E758CB217388F81E7196A /* Alamofire.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Alamofire.modulemap; sourceTree = "<group>"; };
+		5D53DF1FC0992413A0FFCBA02E3878C6 /* MultipartFormData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MultipartFormData.swift; path = Source/MultipartFormData.swift; sourceTree = "<group>"; };
+		5E31F1232F19506C33355E01B513BAF5 /* SpotifyKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SpotifyKit.xcconfig; sourceTree = "<group>"; };
+		5F27802E1F12E1FF43C781FCEEF2B790 /* Pods_Storia.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Storia.framework; path = "Pods-Storia.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		61389A5C9EB196CA654E0869411C5F40 /* SwiftyJSON.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftyJSON.swift; path = Source/SwiftyJSON.swift; sourceTree = "<group>"; };
+		62F9CBF71098F7A408BF64311C1F09B8 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6D630E8EEEB6A35B15F8CA5152F28E3D /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftyJSON.framework; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6E698FC68437F1631ED7C29F39860F80 /* Pods-Storia.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Storia.release.xcconfig"; sourceTree = "<group>"; };
+		6FA064668DED05EBE7AE951A76BDA252 /* Pods-Storia-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Storia-dummy.m"; sourceTree = "<group>"; };
+		715F7680D944DBA0224AC8F15D89B813 /* ServerTrustPolicy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ServerTrustPolicy.swift; path = Source/ServerTrustPolicy.swift; sourceTree = "<group>"; };
+		76EEC9A38F48316334EBE5D65B9E34D3 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Alamofire.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7962023EF7A48CE49AADB9AEE9FF2155 /* Result.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Result.swift; path = Source/Result.swift; sourceTree = "<group>"; };
+		7A8A12CB6E87B4C8E3AF249321012E22 /* Pods-Storia.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Storia.modulemap"; sourceTree = "<group>"; };
+		7C6391D7B6532CFAEB67CD4FC764F9B8 /* Keychain.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Keychain.swift; path = Sources/Keychain.swift; sourceTree = "<group>"; };
+		80BC45D9ECFE700746A4E6001A70A7E1 /* SwiftyJSON.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftyJSON.xcconfig; sourceTree = "<group>"; };
+		883416C6192556435410B7A6E82D80DF /* Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Alamofire.swift; path = Source/Alamofire.swift; sourceTree = "<group>"; };
+		9286C896FA89D7A7FFAE56EA5250605B /* AFError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AFError.swift; path = Source/AFError.swift; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		94B8608A7298A6557F2BC6E2F338C465 /* SwiftyJSON.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SwiftyJSON.modulemap; sourceTree = "<group>"; };
+		9926C6916951B03E259AEAE27F2CE1A1 /* SwiftyJSON-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyJSON-prefix.pch"; sourceTree = "<group>"; };
+		9DCD727A3A2FC64C7E9969AEF5564CE0 /* Pods-Storia.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Storia.debug.xcconfig"; sourceTree = "<group>"; };
+		A0A6920955376E7C72C46150740BAEE4 /* SpotifyItems.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SpotifyItems.swift; path = Sources/SpotifyItems.swift; sourceTree = "<group>"; };
+		AAA73E144E3EBCBF2EB5A65B94B9F4D9 /* Pods-Storia-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Storia-frameworks.sh"; sourceTree = "<group>"; };
+		ADEAFDC6879133D8D11E66641D919830 /* NetworkReachabilityManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NetworkReachabilityManager.swift; path = Source/NetworkReachabilityManager.swift; sourceTree = "<group>"; };
+		B04489B17E9E606412C199C7F808B91D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B87C3C2AF6E54E5EF47EDDB192CB5776 /* ResponseSerialization.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ResponseSerialization.swift; path = Source/ResponseSerialization.swift; sourceTree = "<group>"; };
+		BB40CEDE6623B9D713364EFB97278654 /* SwiftyJSON-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftyJSON-dummy.m"; sourceTree = "<group>"; };
+		BE2300E92FB31A031BB1ADD576595432 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C1C628AEC9168B73B6DCFC2AA7A7EB0B /* SpotifyKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SpotifyKit.modulemap; sourceTree = "<group>"; };
+		C6D41794C047F45EC7976F75355A010B /* SpotifyKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SpotifyKit-dummy.m"; sourceTree = "<group>"; };
+		CB4C76225BF5607F2661E42E295B1769 /* Alamofire-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Alamofire-dummy.m"; sourceTree = "<group>"; };
+		CEBC99A4F67C7D9FBEA22B8CFC471786 /* Pods-Storia-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Storia-resources.sh"; sourceTree = "<group>"; };
+		D08D3AB340E41ABE32D9190386B7D61D /* SwiftyJSON-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyJSON-umbrella.h"; sourceTree = "<group>"; };
+		D255160BFD77291355FD61A9884912E5 /* SessionManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionManager.swift; path = Source/SessionManager.swift; sourceTree = "<group>"; };
+		D6DFF15000AFE2A371BF499E7AFDA808 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		DA631C2B0AF500DC52A98FA94F9C17C8 /* SpotifyKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SpotifyKit-prefix.pch"; sourceTree = "<group>"; };
+		DD992D57ACF00FAB9C4C1C9A73BCBE42 /* SpotifyKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SpotifyKit-umbrella.h"; sourceTree = "<group>"; };
+		E2B0417936E82A9FA7F21CC43BC1F856 /* SpotifyKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SpotifyKit.framework; path = SpotifyKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E946542751A7524124B95A79446D8EC3 /* Pods-Storia-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Storia-acknowledgements.plist"; sourceTree = "<group>"; };
+		F9AC11AD9903E8AF6CD5B8BDB3BB712E /* Alamofire-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-prefix.pch"; sourceTree = "<group>"; };
+		FC3B464906ACAC4490284F62D934AEF6 /* ParameterEncoding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ParameterEncoding.swift; path = Source/ParameterEncoding.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		535173F34F705CA8E5BE840979E214BD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AED65B71AEE930425F363A97172385B6 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5BA5A837F47F8CEA5700A72CEE6A167E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				460C257CF7683B4989454FDB3220D086 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6E8AF668A2161F7D6F680F721DB65D2D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D1E66FE754A575BFFD9E0A4AD2E5ACC /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A594681F9C970289DA52E92621C879D3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B48E971704BDD295C12B5D29B01737DB /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		05BE03CAB4226C2DB05C88745568D5DA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				76EEC9A38F48316334EBE5D65B9E34D3 /* Alamofire.framework */,
+				5F27802E1F12E1FF43C781FCEEF2B790 /* Pods_Storia.framework */,
+				E2B0417936E82A9FA7F21CC43BC1F856 /* SpotifyKit.framework */,
+				6D630E8EEEB6A35B15F8CA5152F28E3D /* SwiftyJSON.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0DCE00D24E2968948DF9672A2D8C94A2 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				5B6D2FE0360DCEB9B90E198F5B17A834 /* Pods-Storia */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		17D85D234C39DDD4B99B582B69E122A5 /* SpotifyKit */ = {
+			isa = PBXGroup;
+			children = (
+				7C6391D7B6532CFAEB67CD4FC764F9B8 /* Keychain.swift */,
+				A0A6920955376E7C72C46150740BAEE4 /* SpotifyItems.swift */,
+				2EF2CDB73FA8A1E0CF90554B4C680DCA /* SpotifyKit.swift */,
+				2654373FA9216ED6E8676C5012953C91 /* WebCommunications.swift */,
+				81644B9C2718093F6795FFC8E72E1608 /* Support Files */,
+			);
+			name = SpotifyKit;
+			path = SpotifyKit;
+			sourceTree = "<group>";
+		};
+		44D5347904CF754D6785B84253F2574A /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				D6DFF15000AFE2A371BF499E7AFDA808 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		5B6D2FE0360DCEB9B90E198F5B17A834 /* Pods-Storia */ = {
+			isa = PBXGroup;
+			children = (
+				62F9CBF71098F7A408BF64311C1F09B8 /* Info.plist */,
+				7A8A12CB6E87B4C8E3AF249321012E22 /* Pods-Storia.modulemap */,
+				21714BF966C15CE0672E90A632C3792F /* Pods-Storia-acknowledgements.markdown */,
+				E946542751A7524124B95A79446D8EC3 /* Pods-Storia-acknowledgements.plist */,
+				6FA064668DED05EBE7AE951A76BDA252 /* Pods-Storia-dummy.m */,
+				AAA73E144E3EBCBF2EB5A65B94B9F4D9 /* Pods-Storia-frameworks.sh */,
+				CEBC99A4F67C7D9FBEA22B8CFC471786 /* Pods-Storia-resources.sh */,
+				39E0607A162B0282C98323D430F841AC /* Pods-Storia-umbrella.h */,
+				9DCD727A3A2FC64C7E9969AEF5564CE0 /* Pods-Storia.debug.xcconfig */,
+				6E698FC68437F1631ED7C29F39860F80 /* Pods-Storia.release.xcconfig */,
+			);
+			name = "Pods-Storia";
+			path = "Target Support Files/Pods-Storia";
+			sourceTree = "<group>";
+		};
+		6343DE5D67FF47AB544E770328435A50 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				23593F98B8C808D105F93F6EDD9E3C6C /* Info.plist */,
+				94B8608A7298A6557F2BC6E2F338C465 /* SwiftyJSON.modulemap */,
+				80BC45D9ECFE700746A4E6001A70A7E1 /* SwiftyJSON.xcconfig */,
+				BB40CEDE6623B9D713364EFB97278654 /* SwiftyJSON-dummy.m */,
+				9926C6916951B03E259AEAE27F2CE1A1 /* SwiftyJSON-prefix.pch */,
+				D08D3AB340E41ABE32D9190386B7D61D /* SwiftyJSON-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SwiftyJSON";
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				E3C7816F294DB724D23B5B4169833D8B /* Pods */,
+				05BE03CAB4226C2DB05C88745568D5DA /* Products */,
+				0DCE00D24E2968948DF9672A2D8C94A2 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		81644B9C2718093F6795FFC8E72E1608 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				BE2300E92FB31A031BB1ADD576595432 /* Info.plist */,
+				C1C628AEC9168B73B6DCFC2AA7A7EB0B /* SpotifyKit.modulemap */,
+				5E31F1232F19506C33355E01B513BAF5 /* SpotifyKit.xcconfig */,
+				C6D41794C047F45EC7976F75355A010B /* SpotifyKit-dummy.m */,
+				DA631C2B0AF500DC52A98FA94F9C17C8 /* SpotifyKit-prefix.pch */,
+				DD992D57ACF00FAB9C4C1C9A73BCBE42 /* SpotifyKit-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SpotifyKit";
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				44D5347904CF754D6785B84253F2574A /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C7148DB4310E08A7F9FD6DBFD5D1BB4A /* Alamofire */ = {
+			isa = PBXGroup;
+			children = (
+				9286C896FA89D7A7FFAE56EA5250605B /* AFError.swift */,
+				883416C6192556435410B7A6E82D80DF /* Alamofire.swift */,
+				04CE0827140C2041D6B0232D9A4865E8 /* DispatchQueue+Alamofire.swift */,
+				5D53DF1FC0992413A0FFCBA02E3878C6 /* MultipartFormData.swift */,
+				ADEAFDC6879133D8D11E66641D919830 /* NetworkReachabilityManager.swift */,
+				3E36D0844562606A26B1BE9E498678C3 /* Notifications.swift */,
+				FC3B464906ACAC4490284F62D934AEF6 /* ParameterEncoding.swift */,
+				08DA0FFDBB86EC2BEF896480ADBAE9A8 /* Request.swift */,
+				37DF518CC07DCF846264C0BB1A4B0166 /* Response.swift */,
+				B87C3C2AF6E54E5EF47EDDB192CB5776 /* ResponseSerialization.swift */,
+				7962023EF7A48CE49AADB9AEE9FF2155 /* Result.swift */,
+				715F7680D944DBA0224AC8F15D89B813 /* ServerTrustPolicy.swift */,
+				339050A6A662C9A853443C496C81D39F /* SessionDelegate.swift */,
+				D255160BFD77291355FD61A9884912E5 /* SessionManager.swift */,
+				1F599A64BF666BBF0A2E704D1B398EA8 /* TaskDelegate.swift */,
+				361BC3F2BEF654D8EBBB0652080465D6 /* Timeline.swift */,
+				095B1839571F883CEC3B2E628E9B58C4 /* Validation.swift */,
+				E9517A620630F7176C1C7DAAC2E70017 /* Support Files */,
+			);
+			name = Alamofire;
+			path = Alamofire;
+			sourceTree = "<group>";
+		};
+		CAD45AAFB6C8FFD8D09395C29B4661F2 /* SwiftyJSON */ = {
+			isa = PBXGroup;
+			children = (
+				61389A5C9EB196CA654E0869411C5F40 /* SwiftyJSON.swift */,
+				6343DE5D67FF47AB544E770328435A50 /* Support Files */,
+			);
+			name = SwiftyJSON;
+			path = SwiftyJSON;
+			sourceTree = "<group>";
+		};
+		E3C7816F294DB724D23B5B4169833D8B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C7148DB4310E08A7F9FD6DBFD5D1BB4A /* Alamofire */,
+				17D85D234C39DDD4B99B582B69E122A5 /* SpotifyKit */,
+				CAD45AAFB6C8FFD8D09395C29B4661F2 /* SwiftyJSON */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		E9517A620630F7176C1C7DAAC2E70017 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				4CBC83D5A48E758CB217388F81E7196A /* Alamofire.modulemap */,
+				20E6280A9EB3E0D17CEEC84AB120BF61 /* Alamofire.xcconfig */,
+				CB4C76225BF5607F2661E42E295B1769 /* Alamofire-dummy.m */,
+				F9AC11AD9903E8AF6CD5B8BDB3BB712E /* Alamofire-prefix.pch */,
+				10BC8382EC77A0ACA07BD568155A54D7 /* Alamofire-umbrella.h */,
+				B04489B17E9E606412C199C7F808B91D /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Alamofire";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		59A6C3FF834132C7CD3C64CEEF585DC6 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9360B0757E59FEA16D828D5DFB72F514 /* Pods-Storia-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7403338CEFE5030896DBE4F6ED71808C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				95A0957FE3C301568CDDC1374A4AAA2F /* SpotifyKit-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		91878A19B3AA34AE5C543C3CFE59BE69 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B49D8D2A3917ECD59032D6FDDC9440CE /* SwiftyJSON-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A6A607506FEAAC7C41268D3E5CF4E5FE /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF1461221681BCA12A4147900A704727 /* Alamofire-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		559520667349FAF077F43C1059186EC2 /* SpotifyKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 174105BFD54D6398A24ADC83EF201C98 /* Build configuration list for PBXNativeTarget "SpotifyKit" */;
+			buildPhases = (
+				7403338CEFE5030896DBE4F6ED71808C /* Headers */,
+				B82C1F408CF7F595EDBCE1068577AB7D /* Sources */,
+				5BA5A837F47F8CEA5700A72CEE6A167E /* Frameworks */,
+				5F3553AA3823A4BBED696D682B29D65D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SpotifyKit;
+			productName = SpotifyKit;
+			productReference = E2B0417936E82A9FA7F21CC43BC1F856 /* SpotifyKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		6DBCEEF1ED5A015B8D976E9432AC5E4C /* SwiftyJSON */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D33A5E2E6E6EFCF7F09F5A27B7589FED /* Build configuration list for PBXNativeTarget "SwiftyJSON" */;
+			buildPhases = (
+				91878A19B3AA34AE5C543C3CFE59BE69 /* Headers */,
+				9E70219AFA45954D55B7056069FFA056 /* Sources */,
+				A594681F9C970289DA52E92621C879D3 /* Frameworks */,
+				EB38AB2A1473D3E35891F0619A208D93 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SwiftyJSON;
+			productName = SwiftyJSON;
+			productReference = 6D630E8EEEB6A35B15F8CA5152F28E3D /* SwiftyJSON.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		A9B1FC19E10A875676290F2C9DE66748 /* Pods-Storia */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A49458FCB2F69DA17678F7FB5B266152 /* Build configuration list for PBXNativeTarget "Pods-Storia" */;
+			buildPhases = (
+				59A6C3FF834132C7CD3C64CEEF585DC6 /* Headers */,
+				20162B94209D1E750660DCEF04E72998 /* Sources */,
+				535173F34F705CA8E5BE840979E214BD /* Frameworks */,
+				4C96541E59E3256594456D1B1E8731E2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				78DE68BD419C8576AEFFBFB2E9006B3F /* PBXTargetDependency */,
+				B76E57ED1E5C499AD21D19F00C3D444B /* PBXTargetDependency */,
+				C5ED18136A9D44B95D0B4F8577B4DADF /* PBXTargetDependency */,
+			);
+			name = "Pods-Storia";
+			productName = "Pods-Storia";
+			productReference = 5F27802E1F12E1FF43C781FCEEF2B790 /* Pods_Storia.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		E76458C58C9140B6A16D60547E68E80C /* Alamofire */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 427F0F003A1AD80AE00155AFCDEFAC20 /* Build configuration list for PBXNativeTarget "Alamofire" */;
+			buildPhases = (
+				A6A607506FEAAC7C41268D3E5CF4E5FE /* Headers */,
+				CC399CEC576B42C962CEB290481CAF95 /* Sources */,
+				6E8AF668A2161F7D6F680F721DB65D2D /* Frameworks */,
+				3DDB7E21141D7764AE4658D5B6AFF8C6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Alamofire;
+			productName = Alamofire;
+			productReference = 76EEC9A38F48316334EBE5D65B9E34D3 /* Alamofire.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 05BE03CAB4226C2DB05C88745568D5DA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E76458C58C9140B6A16D60547E68E80C /* Alamofire */,
+				A9B1FC19E10A875676290F2C9DE66748 /* Pods-Storia */,
+				559520667349FAF077F43C1059186EC2 /* SpotifyKit */,
+				6DBCEEF1ED5A015B8D976E9432AC5E4C /* SwiftyJSON */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3DDB7E21141D7764AE4658D5B6AFF8C6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4C96541E59E3256594456D1B1E8731E2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5F3553AA3823A4BBED696D682B29D65D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EB38AB2A1473D3E35891F0619A208D93 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		20162B94209D1E750660DCEF04E72998 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				13A80A35367EE8F717CA84145F4D4F47 /* Pods-Storia-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9E70219AFA45954D55B7056069FFA056 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AE76B0E1EF7D876A7161F93EB3B16A13 /* SwiftyJSON-dummy.m in Sources */,
+				D7E66B41BC321315737F49B3EBE66EDC /* SwiftyJSON.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B82C1F408CF7F595EDBCE1068577AB7D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FBC7CCC0E161857A7664E093FDF5E1BA /* Keychain.swift in Sources */,
+				6A23CF148AC15F581EC570EEBEA2C382 /* SpotifyItems.swift in Sources */,
+				3D1EA63DBE74A5CF2FE9C062F49D820D /* SpotifyKit-dummy.m in Sources */,
+				CCAFE8BF70E6251A3FB7673D2675875C /* SpotifyKit.swift in Sources */,
+				35B8EF3502F2119F787D7E358CE9EB74 /* WebCommunications.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC399CEC576B42C962CEB290481CAF95 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE4BA1EDE444A770F834605F4B65348E /* AFError.swift in Sources */,
+				D4C3899574E9D5DF5E5DA52310560BCC /* Alamofire-dummy.m in Sources */,
+				4E1A913EFB404FB11524718FF0298EFE /* Alamofire.swift in Sources */,
+				DBE6E2E4D205545E7988CFA5057C31D6 /* DispatchQueue+Alamofire.swift in Sources */,
+				FF9C7BC64DB23D2CED48197DE67F0335 /* MultipartFormData.swift in Sources */,
+				B77705737566AE83ED7E448923D7FA60 /* NetworkReachabilityManager.swift in Sources */,
+				500C8EDA60C07B0F127C7FC385E17D38 /* Notifications.swift in Sources */,
+				796177DE2762F24DAC16A709FD954838 /* ParameterEncoding.swift in Sources */,
+				965DACF3DC02857ECBE66C5CBA3DA5D4 /* Request.swift in Sources */,
+				52237C35642089F77DD4D723CEB25737 /* Response.swift in Sources */,
+				5EE5FED83B90A606A763CF1114D1D6FB /* ResponseSerialization.swift in Sources */,
+				F9EA61D484CC15FDDAB0D8C0D26D7949 /* Result.swift in Sources */,
+				6BEA14EC335E07C7063CD1383C0C443C /* ServerTrustPolicy.swift in Sources */,
+				1FC3FD39157C2FFFF3869A1300730086 /* SessionDelegate.swift in Sources */,
+				7068E8A7DDC1424EE8F24BC77E8746F4 /* SessionManager.swift in Sources */,
+				36FF8853CB34A9297AFAA8F5F7456324 /* TaskDelegate.swift in Sources */,
+				B424F524BBBE34E685129945993809A8 /* Timeline.swift in Sources */,
+				58A9719584AFA2D108D9E5C585A79329 /* Validation.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		78DE68BD419C8576AEFFBFB2E9006B3F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Alamofire;
+			target = E76458C58C9140B6A16D60547E68E80C /* Alamofire */;
+			targetProxy = 1F56667740900491FD4D2AF169C656C2 /* PBXContainerItemProxy */;
+		};
+		B76E57ED1E5C499AD21D19F00C3D444B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SpotifyKit;
+			target = 559520667349FAF077F43C1059186EC2 /* SpotifyKit */;
+			targetProxy = B06B586A6898546941A463AAA5B2AA6C /* PBXContainerItemProxy */;
+		};
+		C5ED18136A9D44B95D0B4F8577B4DADF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SwiftyJSON;
+			target = 6DBCEEF1ED5A015B8D976E9432AC5E4C /* SwiftyJSON */;
+			targetProxy = 5C2F862D47FC90ABDC3301A0F093F185 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0AA3B91655AF95B1F49159CD8085CD89 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		1EAFDB7DE59A16060DF36FC40DC2E750 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 20E6280A9EB3E0D17CEEC84AB120BF61 /* Alamofire.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Alamofire/Alamofire-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Alamofire/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/Alamofire/Alamofire.modulemap";
+				PRODUCT_MODULE_NAME = Alamofire;
+				PRODUCT_NAME = Alamofire;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		390CC27C20749A06CCED1E68BF1353BE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5E31F1232F19506C33355E01B513BAF5 /* SpotifyKit.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SpotifyKit/SpotifyKit-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SpotifyKit/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/SpotifyKit/SpotifyKit.modulemap";
+				PRODUCT_MODULE_NAME = SpotifyKit;
+				PRODUCT_NAME = SpotifyKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		6C8CD1DBB97EA7E80A929CAF675BBCAC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 80BC45D9ECFE700746A4E6001A70A7E1 /* SwiftyJSON.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftyJSON/SwiftyJSON-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftyJSON/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/SwiftyJSON/SwiftyJSON.modulemap";
+				PRODUCT_MODULE_NAME = SwiftyJSON;
+				PRODUCT_NAME = SwiftyJSON;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		8000995DA02063BF3777393CD52061DD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 4.2;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		949A976D9396E084E590BFD332CC4690 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6E698FC68437F1631ED7C29F39860F80 /* Pods-Storia.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Storia/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Storia/Pods-Storia.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		C95B2BA6B6EDA94BB9B44E4D41ABA2D1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9DCD727A3A2FC64C7E9969AEF5564CE0 /* Pods-Storia.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Storia/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Storia/Pods-Storia.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		EA907C7F0D4794ADAC8B995B49C1C19C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5E31F1232F19506C33355E01B513BAF5 /* SpotifyKit.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SpotifyKit/SpotifyKit-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SpotifyKit/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/SpotifyKit/SpotifyKit.modulemap";
+				PRODUCT_MODULE_NAME = SpotifyKit;
+				PRODUCT_NAME = SpotifyKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		F5E8403785266DFE266F03CF7F669C87 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 80BC45D9ECFE700746A4E6001A70A7E1 /* SwiftyJSON.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftyJSON/SwiftyJSON-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftyJSON/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/SwiftyJSON/SwiftyJSON.modulemap";
+				PRODUCT_MODULE_NAME = SwiftyJSON;
+				PRODUCT_NAME = SwiftyJSON;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		F9711F223F590669E94B504F3CC44301 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 20E6280A9EB3E0D17CEEC84AB120BF61 /* Alamofire.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Alamofire/Alamofire-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Alamofire/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/Alamofire/Alamofire.modulemap";
+				PRODUCT_MODULE_NAME = Alamofire;
+				PRODUCT_NAME = Alamofire;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		174105BFD54D6398A24ADC83EF201C98 /* Build configuration list for PBXNativeTarget "SpotifyKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA907C7F0D4794ADAC8B995B49C1C19C /* Debug */,
+				390CC27C20749A06CCED1E68BF1353BE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0AA3B91655AF95B1F49159CD8085CD89 /* Debug */,
+				8000995DA02063BF3777393CD52061DD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		427F0F003A1AD80AE00155AFCDEFAC20 /* Build configuration list for PBXNativeTarget "Alamofire" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F9711F223F590669E94B504F3CC44301 /* Debug */,
+				1EAFDB7DE59A16060DF36FC40DC2E750 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A49458FCB2F69DA17678F7FB5B266152 /* Build configuration list for PBXNativeTarget "Pods-Storia" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C95B2BA6B6EDA94BB9B44E4D41ABA2D1 /* Debug */,
+				949A976D9396E084E590BFD332CC4690 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D33A5E2E6E6EFCF7F09F5A27B7589FED /* Build configuration list for PBXNativeTarget "SwiftyJSON" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F5E8403785266DFE266F03CF7F669C87 /* Debug */,
+				6C8CD1DBB97EA7E80A929CAF675BBCAC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

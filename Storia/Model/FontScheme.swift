@@ -11,6 +11,8 @@ import UIKit
 
 class FontScheme {
     
-    public static let gillsans50 = UIFont(name: "GillSans-Light", size: 50)
+    public static func gillsansFont(size: CGFloat) -> UIFont {
+        return UIFont(name: "GillSans-Light", size: size)!
+    }
     
 }

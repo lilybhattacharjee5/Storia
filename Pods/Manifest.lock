@@ -1,0 +1,24 @@
+PODS:
+  - Alamofire (4.8.0)
+  - SpotifyKit (0.0.6)
+  - SwiftyJSON (4.2.0)
+
+DEPENDENCIES:
+  - Alamofire
+  - SpotifyKit
+  - SwiftyJSON
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - SpotifyKit
+    - SwiftyJSON
+
+SPEC CHECKSUMS:
+  Alamofire: 3ec537f71edc9804815215393ae2b1a8ea33a844
+  SpotifyKit: 20abf7e1e170e35683ecbe6d93598e91d4e7b6ab
+  SwiftyJSON: c4bcba26dd9ec7a027fc8eade48e2c911f229e96
+
+PODFILE CHECKSUM: 4667f23b32b86d58880e901ec9aff209f337e6b3
+
+COCOAPODS: 1.5.3
