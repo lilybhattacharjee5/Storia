@@ -50,7 +50,7 @@
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <connections>
-                                    <segue destination="yQc-xE-wHA" kind="show" id="BYh-O9-Br4"/>
+                                    <action selector="goToPlaylists:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VVW-Be-61g"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dws-o9-5AE">
@@ -85,6 +85,7 @@
                         <outlet property="appName" destination="Mfn-S0-y5E" id="O1O-vh-e7l"/>
                         <outlet property="splashBackground" destination="Tuj-Or-m1a" id="vyC-4Z-7pw"/>
                         <outlet property="spotifyLogin" destination="mcj-Yc-8fh" id="ufB-Bi-wRd"/>
+                        <segue destination="yQc-xE-wHA" kind="show" identifier="viewPlaylists" id="EDL-P9-DX4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -103,13 +104,55 @@
                                 <rect key="frame" x="0.0" y="161" width="375" height="426"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="wW6-iu-S3M">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="playlist" rowHeight="100" id="wW6-iu-S3M" customClass="PlaylistTableViewCell" customModule="Storia" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="wW6-iu-S3M" id="4Ki-gS-mD7">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="wW6-iu-S3M" id="4Ki-gS-mD7">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lK7-Bd-Llr">
+                                                    <rect key="frame" x="20" y="10.5" width="80" height="80"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="80" id="gLT-B1-GvM"/>
+                                                        <constraint firstAttribute="width" constant="80" id="khv-wr-5g3"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7e0-bM-S1T">
+                                                    <rect key="frame" x="130" y="10.5" width="225" height="30"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AM4-NO-StS">
+                                                    <rect key="frame" x="130" y="50.5" width="225" height="30"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="30" id="CjE-pw-0bc"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="lK7-Bd-Llr" firstAttribute="top" secondItem="4Ki-gS-mD7" secondAttribute="top" constant="10" id="35c-v3-U9k"/>
+                                                <constraint firstItem="7e0-bM-S1T" firstAttribute="leading" secondItem="lK7-Bd-Llr" secondAttribute="trailing" constant="30" id="5kH-vF-9ah"/>
+                                                <constraint firstAttribute="bottom" secondItem="AM4-NO-StS" secondAttribute="bottom" constant="10" id="6qW-ny-YlH"/>
+                                                <constraint firstAttribute="trailing" secondItem="AM4-NO-StS" secondAttribute="trailing" constant="20" id="CdX-jc-lxR"/>
+                                                <constraint firstItem="AM4-NO-StS" firstAttribute="leading" secondItem="lK7-Bd-Llr" secondAttribute="trailing" constant="30" id="UMb-fm-OSb"/>
+                                                <constraint firstItem="7e0-bM-S1T" firstAttribute="width" secondItem="AM4-NO-StS" secondAttribute="width" id="XRw-If-nvq"/>
+                                                <constraint firstItem="7e0-bM-S1T" firstAttribute="height" secondItem="AM4-NO-StS" secondAttribute="height" id="Z3D-F3-IkV"/>
+                                                <constraint firstItem="lK7-Bd-Llr" firstAttribute="leading" secondItem="4Ki-gS-mD7" secondAttribute="leading" constant="20" id="ewL-iN-RoX"/>
+                                                <constraint firstAttribute="bottom" secondItem="lK7-Bd-Llr" secondAttribute="bottom" constant="10" id="o6P-fv-sir"/>
+                                                <constraint firstItem="AM4-NO-StS" firstAttribute="top" secondItem="7e0-bM-S1T" secondAttribute="bottom" constant="10" id="oml-d6-v2E"/>
+                                                <constraint firstItem="7e0-bM-S1T" firstAttribute="top" secondItem="4Ki-gS-mD7" secondAttribute="top" constant="10" id="uIy-h8-x8q"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="numTracks" destination="AM4-NO-StS" id="pn9-W1-kv5"/>
+                                            <outlet property="playlistImg" destination="lK7-Bd-Llr" id="3uD-cL-AgX"/>
+                                            <outlet property="playlistName" destination="7e0-bM-S1T" id="Z1J-Hp-MMk"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -136,6 +179,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Cf-lK-cMA">
                                 <rect key="frame" x="164.5" y="111" width="46" height="30"/>
                                 <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="searchBooksData:" destination="yQc-xE-wHA" eventType="touchUpInside" id="GQ7-CX-Asy"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -157,14 +203,16 @@
                     </view>
                     <connections>
                         <outlet property="logout" destination="QV9-yv-mhc" id="mfq-eo-05e"/>
+                        <outlet property="nowPlaying" destination="YJ8-TA-DZn" id="rVb-VN-jbp"/>
                         <outlet property="playlistsTitle" destination="Jw9-uq-YTU" id="0aK-OY-fuV"/>
                         <outlet property="searchBooks" destination="9Cf-lK-cMA" id="px7-eQ-DCY"/>
+                        <outlet property="userPlaylists" destination="hfK-wd-r2G" id="yHb-Jo-Stk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="phS-TO-0fZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="Gd5-yN-0cl" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="807" y="-281"/>
+            <point key="canvasLocation" x="805.60000000000002" y="-281.10944527736132"/>
         </scene>
         <!--About View Controller-->
         <scene sceneID="aMS-al-Q5R">

@@ -20,6 +20,7 @@ class HomeScreenViewController: ViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
         splashBackground.backgroundColor = ColorScheme.purple
         
         appName.textColor = UIColor.white
@@ -42,8 +43,30 @@ class HomeScreenViewController: ViewController {
         
     }
     
+    @IBAction func goToPlaylists(_ sender: Any) {
+        //sessionManager.initiateSession(with: [.appRemoteControl], options: .default)
+        performSegue(withIdentifier: "viewPlaylists", sender: sender)
+    }
+    
     @IBAction func unwindToHome(segue: UIStoryboardSegue, sender: Any?) {
         
+    }
+    
+    func getAccessToken(completion: () -> Void) {
+        let requestedScopes: SPTScope = [.appRemoteControl]
+        (UIApplication.shared.delegate as! AppDelegate).sessionManager.initiateSession(with: requestedScopes, options: .default)
+        print(appRemote.connectionParameters.accessToken)
+        completion()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
+        if segue.identifier == "viewPlaylists" {
+            getAccessToken {
+                print("done")
+            }
+        }
     }
 
     /*

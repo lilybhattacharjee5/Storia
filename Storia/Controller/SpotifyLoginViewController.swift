@@ -11,44 +11,37 @@ import Alamofire
 import SwiftyJSON
 import SpotifyKit
 
-class SpotifyLoginViewController: ViewController, SPTSessionManagerDelegate, SPTAppRemoteDelegate, SPTAppRemotePlayerStateDelegate {
+class SpotifyLoginViewController: ViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet var logout: UIButton!
     @IBOutlet var playlistsTitle: UILabel!
     @IBOutlet var searchBooks: UIButton!
-    
-    fileprivate let SpotifyClientID = AppInfo.clientID
-    fileprivate let SpotifyRedirectURL = URL(string: AppInfo.redirectURL)!
-
-    lazy var configuration: SPTConfiguration = {
-        let configuration = SPTConfiguration(clientID: SpotifyClientID, redirectURL: SpotifyRedirectURL)
-        configuration.playURI = ""
-        
-        configuration.tokenSwapURL = URL(string: "https://storia-book.herokuapp.com/api/token")
-        configuration.tokenRefreshURL = URL(string: "https://storia-book.herokuapp.com/api/refresh_token")
-        
-        return configuration
-    }()
-    
-    lazy var sessionManager: SPTSessionManager = {
-        let manager = SPTSessionManager(configuration: configuration, delegate: self)
-        return manager
-    }()
-    
-    lazy var appRemote: SPTAppRemote = {
-        let appRemote = SPTAppRemote(configuration: configuration, logLevel: .debug)
-        appRemote.delegate = self
-        return appRemote
-    }()
+    @IBOutlet var userPlaylists: UITableView!
+    @IBOutlet var nowPlaying: UILabel! = UILabel()
     
     fileprivate var lastPlayerState: SPTAppRemotePlayerState?
     
-    let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    var currTrack: String = ""
+    
+    var trackTimer = Timer()
+    var accessTokenTimer = Timer()
+    
+    var accessToken: String! {
+        didSet {
+            requestPlaylists()
+        }
+    }
+    
+    var playlistIds: [String] = []
+    var playlists: [Playlist] = []
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        //accessToken = appRemote.connectionParameters.accessToken
         
         logout.setTitle("Log Out", for: .normal)
         logout.titleLabel?.font = FontScheme.gillsansFont(size: 16)
@@ -67,8 +60,39 @@ class SpotifyLoginViewController: ViewController, SPTSessionManagerDelegate, SPT
         playlistsTitle.text = "Playlists"
         playlistsTitle.font = FontScheme.gillsansFont(size: 50)
         
-        let requestedScopes: SPTScope = [.appRemoteControl]
-        self.sessionManager.initiateSession(with: requestedScopes, options: .default)
+        nowPlaying.text = "Now Playing: Loading..."
+        nowPlaying.font = FontScheme.gillsansFont(size: 18)
+        
+        self.userPlaylists.dataSource = self
+        self.userPlaylists.delegate = self
+        
+        scheduledUpdateAccessToken()
+        
+        scheduledUpdateTrack()
+        
+    }
+    
+    func scheduledUpdateAccessToken() {
+        accessTokenTimer = Timer.scheduledTimer(timeInterval: 30, target: self, selector: #selector(self.updateAccessToken), userInfo: nil, repeats: true)
+    }
+
+    @objc func updateAccessToken() {
+        if appDelegate.appRemote.connectionParameters.accessToken != nil {
+            self.accessToken = appDelegate.appRemote.connectionParameters.accessToken
+        }
+    }
+    
+    func scheduledUpdateTrack() {
+        trackTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(self.updateTrack), userInfo: nil, repeats: true)
+    }
+    
+    @objc func updateTrack() {
+        if appDelegate.currTrack != nil && self.currTrack != appDelegate.currTrack {
+            nowPlaying.text = "Now Playing: " + appDelegate.currTrack
+            self.currTrack = appDelegate.currTrack
+            nowPlaying.setNeedsDisplay()
+            nowPlaying.setNeedsDisplay()
+        }
     }
     
     @IBAction func logoutFromSpotify(_ sender: Any) {
@@ -76,63 +100,87 @@ class SpotifyLoginViewController: ViewController, SPTSessionManagerDelegate, SPT
         appRemote.connectionParameters.accessToken = ""
     }
     
-    func requestPlaylists() {
-        let headers = [
-            "Accept": "application/json",
-            "Content-Type": "application/json",
-            "Authorization": "Bearer " + appRemote.connectionParameters.accessToken!
-        ]
+    @IBAction func searchBooksData(_ sender: Any) {
         
-        Alamofire.request(URL(string: "https://api.spotify.com/v1/me/playlists")!, method: .get, encoding: JSONEncoding.default, headers: headers)
-            .responseJSON { response in
-                switch response.result {
-                case .success(let data):
-                    let json = JSON(data)
-                    let playlistItems = json["items"].arrayValue
-                    for i in playlistItems {
-                        print(i["name"].stringValue)
+    }
+    
+    private func requestPlaylists() {
+        if accessToken != nil {
+            let headers = [
+                "Accept": "application/json",
+                "Content-Type": "application/json",
+                "Authorization": "Bearer " + accessToken
+            ]
+            
+            Alamofire.request(URL(string: "https://api.spotify.com/v1/me/playlists")!, method: .get, encoding: JSONEncoding.default, headers: headers)
+                .responseJSON { response in
+                    switch response.result {
+                    case .success(let data):
+                        let json = JSON(data)
+                        let playlistItems = json["items"].arrayValue
+                        
+                        var currPlaylist: Playlist
+                        var currPublicStatus: Bool
+                        var currName: String
+                        var currUri: String
+                        var currSnapshotId: String
+                        var currNumTracks: Int
+                        var currImg: UIImage
+                        
+                        for playlist in playlistItems {
+                            currPublicStatus = playlist["public"].bool ?? false
+                            currName = playlist["name"].string ?? ""
+                            currUri = playlist["uri"].string ?? ""
+                            currSnapshotId = playlist["snapshot_id"].string ?? ""
+                            currNumTracks = playlist["tracks"]["total"].int ?? 0
+                            currImg = UIImage()
+                            
+                            if self.playlistIds.contains(currSnapshotId) {
+                                continue
+                            }
+                            
+                            currPlaylist = Playlist(
+                                publicStatus: currPublicStatus,
+                                name: currName,
+                                uri: currUri,
+                                snapshotId: currSnapshotId,
+                                numTracks: currNumTracks,
+                                img: currImg)
+                            
+                            self.playlists.append(currPlaylist)
+                            self.playlistIds.append(currSnapshotId)
+                        }
+                        
+                        self.userPlaylists.reloadData()
+                    
+                    case .failure(let error):
+                        print("Request failed with error: \(error)")
                     }
-                    print("done")
-                case .failure(let error):
-                    print("Request failed with error: \(error)")
-                }
+            }
         }
     }
     
-    func sessionManager(manager: SPTSessionManager, didInitiate session: SPTSession) {
-        self.appRemote.connectionParameters.accessToken = session.accessToken
-        self.appRemote.connect()
+    func tableView(_ tableView: UITableView, numberOfSections section: Int) -> Int {
+        return 1
     }
-
-    func sessionManager(manager: SPTSessionManager, didFailWith error: Error) {
-        print("fail", error)
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.playlists.count
     }
-
-    func sessionManager(manager: SPTSessionManager, didRenew session: SPTSession) {
-        print("renewed", session)
-    }
-
-    func playerStateDidChange(_ playerState: SPTAppRemotePlayerState) {
-        debugPrint("Track name: %@", playerState.track.name)
-    }
-
-    func appRemoteDidEstablishConnection(_ appRemote: SPTAppRemote) {
-        self.appRemote.playerAPI?.delegate = self
-        self.appRemote.playerAPI?.subscribe(toPlayerState: { (result, error) in
-            if let error = error {
-                debugPrint(error.localizedDescription)
-            } else {
-                self.requestPlaylists()
-            }
-        })
-    }
-
-    func appRemote(_ appRemote: SPTAppRemote, didFailConnectionAttemptWithError error: Error?) {
-        print("failed")
-    }
-
-    func appRemote(_ appRemote: SPTAppRemote, didDisconnectWithError error: Error?) {
-        print("disconnected")
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = userPlaylists.dequeueReusableCell(withIdentifier: "playlist", for: indexPath) as! PlaylistTableViewCell
+        let currPlaylist: Playlist = self.playlists[indexPath.row]
+        
+        cell.playlistName.text = currPlaylist.getName()
+        cell.playlistName.font = FontScheme.gillsansFont(size: 14)
+        
+        cell.numTracks.text = "Number of Tracks: " + String(currPlaylist.getNumTracks())
+        cell.numTracks.font = FontScheme.gillsansFont(size: 12)
+        
+        cell.playlistImg.image = currPlaylist.getImg()
+        
+        return cell
     }
 
     /*
