@@ -35,6 +35,8 @@ class SpotifyLoginViewController: ViewController, UITableViewDataSource, UITable
     var playlistIds: [String] = []
     var playlists: [Playlist] = []
     
+    var noDataLabel: UILabel!
+    
     override func viewDidLoad() {
         
         super.viewDidLoad()
@@ -62,9 +64,12 @@ class SpotifyLoginViewController: ViewController, UITableViewDataSource, UITable
         
         nowPlaying.text = "Now Playing: Loading..."
         nowPlaying.font = FontScheme.gillsansFont(size: 18)
+        nowPlaying.textAlignment = .center
+        nowPlaying.lineBreakMode = .byWordWrapping
+        nowPlaying.numberOfLines = 2
         
-        self.userPlaylists.dataSource = self
-        self.userPlaylists.delegate = self
+        userPlaylists.dataSource = self
+        userPlaylists.delegate = self
         
         scheduledUpdateAccessToken()
         
@@ -73,7 +78,7 @@ class SpotifyLoginViewController: ViewController, UITableViewDataSource, UITable
     }
     
     func scheduledUpdateAccessToken() {
-        accessTokenTimer = Timer.scheduledTimer(timeInterval: 30, target: self, selector: #selector(self.updateAccessToken), userInfo: nil, repeats: true)
+        accessTokenTimer = Timer.scheduledTimer(timeInterval: 60, target: self, selector: #selector(self.updateAccessToken), userInfo: nil, repeats: true)
     }
 
     @objc func updateAccessToken() {
@@ -123,19 +128,27 @@ class SpotifyLoginViewController: ViewController, UITableViewDataSource, UITable
                         var currPublicStatus: Bool
                         var currName: String
                         var currUri: String
+                        var currId: String
                         var currSnapshotId: String
                         var currNumTracks: Int
                         var currImg: UIImage
+                        
+                        self.playlists = []
+                        self.playlistIds = []
                         
                         for playlist in playlistItems {
                             currPublicStatus = playlist["public"].bool ?? false
                             currName = playlist["name"].string ?? ""
                             currUri = playlist["uri"].string ?? ""
+                            currId = playlist["id"].string ?? ""
                             currSnapshotId = playlist["snapshot_id"].string ?? ""
                             currNumTracks = playlist["tracks"]["total"].int ?? 0
-                            currImg = UIImage()
                             
-                            if self.playlistIds.contains(currSnapshotId) {
+                            let url = URL(string: playlist["images"][0]["url"].string ?? "")!
+                            let data = try? Data(contentsOf: url)
+                            currImg = UIImage(data: data!) ?? UIImage()
+                            
+                            if self.playlistIds.contains(currId) {
                                 continue
                             }
                             
@@ -143,15 +156,18 @@ class SpotifyLoginViewController: ViewController, UITableViewDataSource, UITable
                                 publicStatus: currPublicStatus,
                                 name: currName,
                                 uri: currUri,
+                                id: currId,
                                 snapshotId: currSnapshotId,
                                 numTracks: currNumTracks,
                                 img: currImg)
                             
                             self.playlists.append(currPlaylist)
-                            self.playlistIds.append(currSnapshotId)
+                            self.playlistIds.append(currId)
                         }
                         
                         self.userPlaylists.reloadData()
+                        self.userPlaylists.setNeedsLayout()
+                        self.userPlaylists.setNeedsDisplay()
                     
                     case .failure(let error):
                         print("Request failed with error: \(error)")
@@ -161,7 +177,12 @@ class SpotifyLoginViewController: ViewController, UITableViewDataSource, UITable
     }
     
     func tableView(_ tableView: UITableView, numberOfSections section: Int) -> Int {
-        return 1
+        if playlists.count == 0 {
+            return 0
+        } else {
+            userPlaylists.separatorStyle = .singleLine
+            return 1
+        }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -173,12 +194,14 @@ class SpotifyLoginViewController: ViewController, UITableViewDataSource, UITable
         let currPlaylist: Playlist = self.playlists[indexPath.row]
         
         cell.playlistName.text = currPlaylist.getName()
-        cell.playlistName.font = FontScheme.gillsansFont(size: 14)
+        cell.playlistName.font = FontScheme.gillsansFont(size: 20)
         
         cell.numTracks.text = "Number of Tracks: " + String(currPlaylist.getNumTracks())
-        cell.numTracks.font = FontScheme.gillsansFont(size: 12)
+        cell.numTracks.font = FontScheme.gillsansFont(size: 18)
         
         cell.playlistImg.image = currPlaylist.getImg()
+        cell.playlistImg.layer.masksToBounds = true
+        cell.playlistImg.layer.cornerRadius = ButtonScheme.padding
         
         return cell
     }

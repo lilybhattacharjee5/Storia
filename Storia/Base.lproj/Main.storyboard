@@ -171,7 +171,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YJ8-TA-DZn">
-                                <rect key="frame" x="166.5" y="607" width="42" height="20.5"/>
+                                <rect key="frame" x="20" y="607" width="335" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -188,6 +188,7 @@
                         <constraints>
                             <constraint firstItem="QV9-yv-mhc" firstAttribute="leading" secondItem="O0z-h0-xDv" secondAttribute="leading" constant="20" id="22q-IT-df3"/>
                             <constraint firstItem="hfK-wd-r2G" firstAttribute="top" secondItem="9Cf-lK-cMA" secondAttribute="bottom" constant="20" id="Kjx-lr-1Oo"/>
+                            <constraint firstItem="YJ8-TA-DZn" firstAttribute="leading" secondItem="O0z-h0-xDv" secondAttribute="leading" constant="20" id="RAV-V7-bi1"/>
                             <constraint firstItem="Jw9-uq-YTU" firstAttribute="top" secondItem="O0z-h0-xDv" secondAttribute="top" constant="50" id="TLx-eg-7YX"/>
                             <constraint firstItem="Jw9-uq-YTU" firstAttribute="centerX" secondItem="O0z-h0-xDv" secondAttribute="centerX" id="Udo-7j-QIi"/>
                             <constraint firstItem="hfK-wd-r2G" firstAttribute="width" secondItem="YMP-uO-lpG" secondAttribute="width" id="Xve-Oo-Elz"/>
