@@ -10,8 +10,12 @@ import Foundation
 
 class AppInfo {
     
+    // spotify api info
     public static let clientID: String = "59e75db40a6647fd9cc01d0593947abe"
     public static let clientSecret: String = "086949f040d14d15af52a56d12bab549"
     public static let redirectURL: String = "storia://spotify-login-callback"
     
+    // goodreads api info
+    public static let goodreadsKey: String = "LDNOvOyRMBy1NMaw1hTBQ"
+    public static let goodreadsSecret: String = "Q9BXoMYCcHSV4TBvyV3mZrz52OMU1RKnLWhnXZknw"
 }

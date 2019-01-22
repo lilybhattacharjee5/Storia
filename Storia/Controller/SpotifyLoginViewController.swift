@@ -205,6 +205,10 @@ class SpotifyLoginViewController: ViewController, UITableViewDataSource, UITable
         
         return cell
     }
+    
+    @IBAction func unwindToPlaylistViewController(segue: UIStoryboardSegue, _ sender: Any) {
+        
+    }
 
     /*
     // MARK: - Navigation
